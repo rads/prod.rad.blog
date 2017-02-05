@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>hyperlog</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="styling.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">hyperlog</h1>
+</header>
+<p>GitHub: <a href="https://github.com/mafintosh/hyperlog" class="uri">https://github.com/mafintosh/hyperlog</a></p>
+<h2 id="replication-protocol">Replication Protocol</h2>
+<blockquote>
+<ul>
+<li>Every user has their own scuttlebutt like log (append-only log).</li>
+<li>When a user insert a new node into the graph they also add this node to their own log. If their graph node has a link to another users log they’ll record that in an index (lets call this index A).</li>
+<li>When replicating you look at the heads of your graph (the nodes that no one points to). You’ll send back a scuttlebutt like handshake for each of the logs that head nodes are stored in.</li>
+<li>If the remote user doesn’t have the head log, or if their latest node is this log is older than the seq returned in the handshake they’ll send a request for the diff.</li>
+<li>If you send back a node that has a reference to another feed in index A, send back the scuttlebutt handshake for that particular log.</li>
+</ul>
+<p>So when a user does hyperlog.add(links, node) hyperlog will lookup the nodes referenced by the links array and see which logs they belong too. If any of those logs are different than our own local log that information is stored in an internal index.</p>
+</blockquote>
+</body>
+</html>
