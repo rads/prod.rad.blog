@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Backups</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Backups</h1>
+</div>
+<p><em>plural noun</em></p>
+<blockquote>
+<p>things that can be called on if necessary; reserves.</p>
+</blockquote>
+<h2 id="my-home-backup-system">My Home Backup System</h2>
+<p>When I put effort into something <a href="bliki">I want to keep it around</a>. That's why I'm paranoid about my backups.</p>
+<h3 id="structure">Structure</h3>
+<ul>
+<li>Offsite
+<ul>
+<li><strong>Dropbox</strong>
+<ul>
+<li>Schedule
+<ul>
+<li>Continuous</li>
+</ul></li>
+</ul></li>
+<li><strong>CrashPlan</strong>
+<ul>
+<li>Schedule
+<ul>
+<li>Continuous</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Onsite
+<ul>
+<li><strong>Time Machine</strong>
+<ul>
+<li>Schedule
+<ul>
+<li>Continuous</li>
+</ul></li>
+<li>Hardware
+<ul>
+<li>QNAP TS-251 NAS</li>
+<li>APC Back-UPS 550</li>
+</ul></li>
+</ul></li>
+<li><strong>Carbon Copy Cloner</strong>
+<ul>
+<li>Schedule
+<ul>
+<li>Daily at 3:30am</li>
+</ul></li>
+<li>Hardware
+<ul>
+<li>1TB Western Digital SSD over USB</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="notes">Notes</h3>
+<p>I do all of my work in the Dropbox folder. This means the files are backed up as soon as I save them. It also gives me a limited form of version control (though if I need more I'll use a local Git repository).</p>
+<p>Time Machine is enabled on each Mac. Since this part of the backup has a higher delay than Dropbox, I don't rely it on for files I'm actively working on.</p>
+<p>CrashPlan runs on each machine (including the NAS). Since the local disks contain Time Machine archives, all the machines <em>and</em> their history are replicated to CrashPlan. The full Time Machine archive is safe as long as at least one copy, local or remote, is preserved. The NAS is setup in a RAID-1 array with large disks to tolerate individual hardware failures and perserve as much history as possible.</p>
+<p>The only realistic scenario where I can lose data is if my local backups and CrashPlan fail at the same time. That said, one thing I'm currently lacking is a routine for testing the backups. For example, if something goes wrong with Time Machine, the bad version will still get backed up to CrashPlan.</p>
+</body>
+</html>
