@@ -36,16 +36,14 @@
 <p>Many families make a copy of the master key for each person in the house. If Mom is at work, her kids can still get in the house without her when they return from school. That’s because their slabs of metal all share the same shape. The idea of sharing a shape rather than a concrete representation shows up <em>everywhere</em> in programming.</p>
 <p>Replication is an essential part of peer-to-peer networking. In an unreliable network it’s impossible for one peer to always have an up-to-date copy of the other peers. Instead the peers must talk to one another to disseminate information across the network. This is called a <a href="gossip-protocols">gossip protocol</a>.</p>
 <h2 id="related-terms">Related Terms</h2>
-<p>Atomic Broadcast, Content Addressing, Content Hashing, Discovery, <a href="distributed-systems">Distributed Systems</a>, Encryption, Eventual Consistency, Fault-Tolerance, <a href="gossip-protocols">Gossip Protocols</a>, High Availability, Merkle DAG, Membership, Messaging, Networking, Network Hole Punching, Protocol, Partial Order, Peer-to-Peer, State Machines, TCP, Total Order, UDP</p>
+<p>Atomic Broadcast, Content Addressing, Content Hashing, Discovery, <a href="crdt">CRDT</a>, <a href="distributed-systems">Distributed Systems</a>, Encryption, Eventual Consistency, Fault-Tolerance, <a href="gossip-protocols">Gossip Protocols</a>, High Availability, Merkle DAG, Membership, Messaging, Networking, Network Hole Punching, Protocol, Partial Order, Peer-to-Peer, State Machines, TCP, Total Order, UDP</p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=ebWVLVhiaiY"><em>Strong Eventual Consistency and Conflict-free Replicated Data Types</em></a> (2011)</li>
-<li><a href="http://hal.upmc.fr/inria-00555588/document"><em>A comprehensive study of Convergent and Commutative Replicated Data Types</em></a> (2011)</li>
 <li><a href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-go.pdf"><em>Reliable, Consistent, and Efficient Data Sync for Mobile Apps</em></a> (2015)</li>
 <li><a href="https://web.eecs.umich.edu/~harshavm/papers/eurosys15.pdf"><em>Simba: Tunable End-to-End Data Consistency for Mobile Apps</em></a> (2015)</li>
 <li><a href="https://arxiv.org/pdf/1508.05545.pdf"><em>Decoupling conflicts for configurable resolution in an open replication system</em></a> (2016)</li>
 </ul>
-<p>See also: <a href="gossip-protocols">Gossip Protocols</a>.</p>
+<p>See also: <a href="crdt">CRDT</a>, <a href="gossip-protocols">Gossip Protocols</a>.</p>
 <h2 id="implementations">Implementations</h2>
 <ul>
 <li>C
@@ -83,7 +81,7 @@
 <li><a href="https://pouchdb.com/">PouchDB</a></li>
 </ul></li>
 </ul>
-<p>I have a separate page for <a href="scuttlebutt">Scuttlebutt</a> implementations.</p>
+<p>There’s separate page for <a href="scuttlebutt">Scuttlebutt</a> implementations.</p>
 <script>
 (function() {
   var s = document.createElement('script');

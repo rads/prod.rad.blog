@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>rad.blog: CRDT</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="styling.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">CRDT</h1>
+</header>
+<p>An acronym for Conflict-free Replicated Data Types.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>This talk by Marc Shapiro is an excellent introduction to what CRDTs are and how they work:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ebWVLVhiaiY" frameborder="0" allowfullscreen>
+</iframe>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://hal.upmc.fr/inria-00555588/document"><em>A comprehensive study of Convergent and Commutative Replicated Data Types</em></a> (2011)</li>
+</ul>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
