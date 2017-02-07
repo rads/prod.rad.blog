@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>rad.blog: Distributed Systems</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="styling.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Distributed Systems</h1>
+</header>
+<p><a href="https://medium.com/@bbc4468/centralized-vs-decentralized-vs-distributed-41d92d463868"><img src="centralized-decentralized-distributed.jpg" alt="Centralized vs. Decentralized vs. Distributed" /></a></p>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
