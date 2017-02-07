@@ -27,5 +27,20 @@
 <li><a href="https://amzn.to/2kHshNJ"><em>The Joy of Clojure</em></a></li>
 <li><a href="https://amzn.to/2l7Tomd"><em>Mindstorms: Children, Computers, And Powerful Ideas</em></a></li>
 </ul>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

@@ -72,5 +72,20 @@
 <p>Time Machine is enabled on each Mac. Since this part of the backup has a higher delay than Dropbox, I don’t rely it on for files I’m actively working on.</p>
 <p>CrashPlan runs on each machine (including the NAS). Since the local disks contain Time Machine archives, all the machines <em>and</em> their history are replicated to CrashPlan. The full Time Machine archive is safe as long as at least one copy, local or remote, is preserved. The NAS is setup in a RAID-1 array with large disks to tolerate individual hardware failures and perserve as much history as possible.</p>
 <p>The only realistic scenario where I can lose data is if my local backups and CrashPlan fail at the same time. That said, I’m lacking a routine for testing the backups. For example, if something goes wrong with Time Machine, the bad version will still get backed up to CrashPlan.</p>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

@@ -85,5 +85,20 @@
 <li><a href="https://awinterman.github.io/simple-scuttle/">simple-scuttle</a></li>
 </ul></li>
 </ul>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

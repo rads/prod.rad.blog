@@ -27,5 +27,20 @@
 <p>If feed A posts a message that links to a message in feed B, then we know that A’s message is after B’s. That is, message-links imply a happens-before relationship. (This is because, in order to know the hash of an object, that object must already exist.)</p>
 <p>Messages contain monotonically increasing UTC timestamps and sequence numbers. This means you can assign an order to any two messages. However, be aware that there is no way to ensure that the timestamp is accurate.</p>
 </blockquote>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '/js/events-client.min.js';
+  s.onload = function() {
+    var c = radBlogEventsClient;
+    c.sendEvent(c.createEvent(), function(err) {
+      if (err) console.log(err);
+    });
+  }
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>
