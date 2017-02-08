@@ -23,3 +23,5 @@ This talk by Marc Shapiro is an excellent introduction to what CRDTs are and how
 
 - Clojure
     - [replikativ](http://replikativ.io/) ([Bliki](replikativ))
+- JavaScript
+    - [hyperlog](https://github.com/mafintosh/hyperlog) ([Bliki](hyperlog))
