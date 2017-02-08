@@ -25,3 +25,6 @@ This talk by Marc Shapiro is an excellent introduction to what CRDTs are and how
     - [replikativ](http://replikativ.io/) ([Bliki](replikativ))
 - JavaScript
     - [hyperlog](https://github.com/mafintosh/hyperlog) ([Bliki](hyperlog))
+        - hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.
+    - [Scuttlebot](https://github.com/ssbc/scuttlebot) ([Bliki](scuttlebot))
+        - Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message's locally-recorded timestamp.

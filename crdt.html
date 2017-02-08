@@ -35,7 +35,14 @@
 </ul></li>
 <li>JavaScript
 <ul>
-<li><a href="https://github.com/mafintosh/hyperlog">hyperlog</a> (<a href="hyperlog">Bliki</a>)</li>
+<li><a href="https://github.com/mafintosh/hyperlog">hyperlog</a> (<a href="hyperlog">Bliki</a>)
+<ul>
+<li>hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.</li>
+</ul></li>
+<li><a href="https://github.com/ssbc/scuttlebot">Scuttlebot</a> (<a href="scuttlebot">Bliki</a>)
+<ul>
+<li>Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message’s locally-recorded timestamp.</li>
+</ul></li>
 </ul></li>
 </ul>
 <script>
