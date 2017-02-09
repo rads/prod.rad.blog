@@ -90,13 +90,6 @@ h6 {
 }
 
 a {
-  text-decoration: none;
-  border-width: 1px;
-  border-style: solid;
-  height: 27px;
-  font-size: 18px;
-  display: inline-block;
-  border-color: #fff #fff #ccc #fff;
   color: #055abe;
 }
 

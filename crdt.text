@@ -6,9 +6,14 @@ An acronym for **Conflict-free Replicated Data Type**.
 
 ## Getting Started
 
-See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.
+<figure class="right">
+  <a href="https://www.youtube.com/watch?v=ebWVLVhiaiY">
+    <img src="shapiro.jpg" width="469">
+  </a>
+  <caption>Marc Shapiro</caption>
+</figure>
 
-[<img src="shapiro.jpg" width="469">][talk]
+See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.
 
 [talk]: https://www.youtube.com/watch?v=ebWVLVhiaiY
 
