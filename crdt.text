@@ -25,13 +25,16 @@ See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction o
     - [replikativ](http://replikativ.io/) ([Bliki](replikativ))
         - replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)
 - Erlang
+        - Currently only supports WebSockets as wire
     - [CouchDB](https://couchdb.readthedocs.io/en/latest/replication/protocol.html)
         - CouchDB uses a Merkle DAG like hyperlog and Git
 - JavaScript
     - [hyperlog](https://github.com/mafintosh/hyperlog) ([Bliki](hyperlog))
         - hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.
+        - Uses Node.js streams as wire
     - [Scuttlebot](https://github.com/ssbc/scuttlebot) ([Bliki](scuttlebot))
         - Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message's locally-recorded timestamp.
     - [PouchDB](https://pouchdb.com/)
         - A client for CouchDB in JavaScript.
         - [Decentralized, not distributed](distributed-systems): PouchDB relies on an external CouchDB server to talk to other peers.
+        - Uses HTTP as wire
