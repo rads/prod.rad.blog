@@ -24,8 +24,8 @@ See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction o
 - Clojure
     - [replikativ](http://replikativ.io/) ([Bliki](replikativ))
         - replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)
-- Erlang
         - Currently only supports WebSockets as wire
+- Erlang
     - [CouchDB](https://couchdb.readthedocs.io/en/latest/replication/protocol.html)
         - CouchDB uses a Merkle DAG like hyperlog and Git
 - JavaScript
