@@ -23,6 +23,10 @@ See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction o
 
 ## Implementations
 
+See [TodoP2P][todop2p] for example projects using some of these libraries.
+
+[todop2p]: https://github.com/rads/todop2p
+
 - Clojure
     - [replikativ](http://replikativ.io/) ([Bliki](replikativ))
         - replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)
