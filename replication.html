@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>rad.blog: Replication</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="styling.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header>
-<h1 class="title">Replication</h1>
-</header>
-<p><em>noun</em></p>
-<blockquote>
-<p>the action of copying or reproducing something.</p>
-</blockquote>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#example">Example</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#related-terms">Related Terms</a></li>
-<li><a href="#references">References</a></li>
-<li><a href="#implementations">Implementations</a></li>
-</ul>
-<h2 id="example">Example</h2>
-<p>This is replication.</p>
-<p>This is replication.</p>
-<p>This is replication.</p>
-<h2 id="introduction">Introduction</h2>
-<p>If you’ve got something important you’re better off making a copy sooner than later.</p>
-<p>Many families make a copy of the master key for each person in the house. If Mom is at work, her kids can still get in the house without her when they return from school. That’s because their slabs of metal all share the same shape. The idea of sharing a shape rather than a concrete representation shows up <em>everywhere</em> in programming.</p>
-<p>Replication is an essential part of <a href="p2p">P2P</a> networking. In an unreliable network it’s impossible for one peer to always have an up-to-date copy of the other peers. Instead the peers must talk to one another to disseminate information across the network. This is called a <a href="gossip-protocols">gossip protocol</a>.</p>
-<h2 id="related-terms">Related Terms</h2>
-<p>Atomic Broadcast, <a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP Theorem</a>, Content Addressing, Content Hashing, Discovery, <a href="crdt">CRDT</a>, <a href="distributed-systems">Distributed Systems</a>, Encryption, Eventual Consistency, Fault-Tolerance, <a href="gossip-protocols">Gossip Protocols</a>, High Availability, Merkle DAG, Membership, Messaging, Networking, Network Hole Punching, Protocol, Partial Order, <a href="p2p">P2P</a>, State Machines, TCP, Total Order, UDP</p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-go.pdf"><em>Reliable, Consistent, and Efficient Data Sync for Mobile Apps</em></a> (2015)</li>
-<li><a href="https://web.eecs.umich.edu/~harshavm/papers/eurosys15.pdf"><em>Simba: Tunable End-to-End Data Consistency for Mobile Apps</em></a> (2015)</li>
-</ul>
-<p>See also: <a href="crdt">CRDT</a>, <a href="gossip-protocols">Gossip Protocols</a>.</p>
-<h2 id="implementations">Implementations</h2>
-<p>There are separate pages for <a href="crdt#implementations">CRDT</a> and <a href="scuttlebutt#implementations">Scuttlebutt</a> implementations.</p>
-<ul>
-<li>C
-<ul>
-<li><a href="https://dev.mysql.com/doc/refman/5.7/en/replication.html">MySQL</a></li>
-<li><a href="https://www.postgresql.org/docs/current/static/high-availability.html">PostgreSQL</a></li>
-</ul></li>
-<li>Clojure
-<ul>
-<li><a href="http://www.datomic.com/">Datomic</a></li>
-</ul></li>
-<li>Cloud
-<ul>
-<li><a href="https://aws.amazon.com/rds/aurora/">Amazon Aurora</a></li>
-<li><a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a></li>
-<li><a href="https://cloud.google.com/datastore/">Google Cloud Datastore</a></li>
-<li><a href="https://cloud.google.com/sql/">Google Cloud SQL</a></li>
-<li><a href="https://docs.microsoft.com/en-us/azure/documentdb/documentdb-distribute-data-globally">Microsoft Azure DocumentDB</a></li>
-<li><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups">Microsoft Azure SQL Database</a></li>
-<li><a href="https://azure.microsoft.com/en-us/services/storage/tables/">Microsoft Azure Table Storage</a></li>
-</ul></li>
-<li>Go
-<ul>
-<li><a href="https://ipfs.io">IPFS</a></li>
-</ul></li>
-<li>Java
-<ul>
-<li><a href="https://docs.jboss.org/hornetq/2.4.0.Final/docs/user-manual/html/ha.html">HornetQ</a></li>
-<li><a href="https://kafka.apache.org/documentation/#replication">Kafka</a></li>
-</ul></li>
-</ul>
-<script>
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '/js/events-client.min.js';
-  s.onload = function() {
-    var c = radBlogEventsClient;
-    c.sendEvent(c.createEvent(), function(err) {
-      if (err) console.log(err);
-    });
-  }
-  document.body.appendChild(s);
-})();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Replication</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo">rad</h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Replication</h2>
+          </div>
+          <div class="Post-content">
+            <p><em>noun</em></p>
+            <blockquote>
+            <p>the action of copying or reproducing something.</p>
+            </blockquote>
+            <h2 id="table-of-contents">Table of Contents</h2>
+            <ul>
+            <li><a href="#example">Example</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#related-terms">Related Terms</a></li>
+            <li><a href="#references">References</a></li>
+            <li><a href="#implementations">Implementations</a></li>
+            </ul>
+            <h2 id="example">Example</h2>
+            <p>This is replication.</p>
+            <p>This is replication.</p>
+            <p>This is replication.</p>
+            <h2 id="introduction">Introduction</h2>
+            <p>If you’ve got something important you’re better off making a copy sooner than later.</p>
+            <p>Many families make a copy of the master key for each person in the house. If Mom is at work, her kids can still get in the house without her when they return from school. That’s because their slabs of metal all share the same shape. The idea of sharing a shape rather than a concrete representation shows up <em>everywhere</em> in programming.</p>
+            <p>Replication is an essential part of <a href="p2p">P2P</a> networking. In an unreliable network it’s impossible for one peer to always have an up-to-date copy of the other peers. Instead the peers must talk to one another to disseminate information across the network. This is called a <a href="gossip-protocols">gossip protocol</a>.</p>
+            <h2 id="related-terms">Related Terms</h2>
+            <p>Atomic Broadcast, <a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP Theorem</a>, Content Addressing, Content Hashing, Discovery, <a href="crdt">CRDT</a>, <a href="distributed-systems">Distributed Systems</a>, Encryption, Eventual Consistency, Fault-Tolerance, <a href="gossip-protocols">Gossip Protocols</a>, High Availability, Merkle DAG, Membership, Messaging, Networking, Network Hole Punching, Protocol, Partial Order, <a href="p2p">P2P</a>, State Machines, TCP, Total Order, UDP</p>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-go.pdf"><em>Reliable, Consistent, and Efficient Data Sync for Mobile Apps</em></a> (2015)</li>
+            <li><a href="https://web.eecs.umich.edu/~harshavm/papers/eurosys15.pdf"><em>Simba: Tunable End-to-End Data Consistency for Mobile Apps</em></a> (2015)</li>
+            </ul>
+            <p>See also: <a href="crdt">CRDT</a>, <a href="gossip-protocols">Gossip Protocols</a>.</p>
+            <h2 id="implementations">Implementations</h2>
+            <p>There are separate pages for <a href="crdt#implementations">CRDT</a> and <a href="scuttlebutt#implementations">Scuttlebutt</a> implementations.</p>
+            <ul>
+            <li>C
+            <ul>
+            <li><a href="https://dev.mysql.com/doc/refman/5.7/en/replication.html">MySQL</a></li>
+            <li><a href="https://www.postgresql.org/docs/current/static/high-availability.html">PostgreSQL</a></li>
+            </ul></li>
+            <li>Clojure
+            <ul>
+            <li><a href="http://www.datomic.com/">Datomic</a></li>
+            </ul></li>
+            <li>Cloud
+            <ul>
+            <li><a href="https://aws.amazon.com/rds/aurora/">Amazon Aurora</a></li>
+            <li><a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a></li>
+            <li><a href="https://cloud.google.com/datastore/">Google Cloud Datastore</a></li>
+            <li><a href="https://cloud.google.com/sql/">Google Cloud SQL</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/azure/documentdb/documentdb-distribute-data-globally">Microsoft Azure DocumentDB</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups">Microsoft Azure SQL Database</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/services/storage/tables/">Microsoft Azure Table Storage</a></li>
+            </ul></li>
+            <li>Go
+            <ul>
+            <li><a href="https://ipfs.io">IPFS</a></li>
+            </ul></li>
+            <li>Java
+            <ul>
+            <li><a href="https://docs.jboss.org/hornetq/2.4.0.Final/docs/user-manual/html/ha.html">HornetQ</a></li>
+            <li><a href="https://kafka.apache.org/documentation/#replication">Kafka</a></li>
+            </ul></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
 </html>

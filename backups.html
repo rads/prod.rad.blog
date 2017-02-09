@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>rad.blog: Backups</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="styling.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header>
-<h1 class="title">Backups</h1>
-</header>
-<p><em>plural noun</em></p>
-<blockquote>
-<p>things that can be called on if necessary; reserves.</p>
-</blockquote>
-<h2 id="my-home-backup-system">My Home Backup System</h2>
-<p>When I put effort into something <a href="bliki">I want to keep it around</a>. That’s why I’m paranoid about my backups.</p>
-<h3 id="structure">Structure</h3>
-<ul>
-<li>Offsite
-<ul>
-<li><strong>Dropbox</strong>
-<ul>
-<li>Schedule
-<ul>
-<li>Continuous</li>
-</ul></li>
-</ul></li>
-<li><strong>CrashPlan</strong>
-<ul>
-<li>Schedule
-<ul>
-<li>Continuous</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>Onsite
-<ul>
-<li><strong>Time Machine</strong>
-<ul>
-<li>Schedule
-<ul>
-<li>Continuous</li>
-</ul></li>
-<li>Hardware
-<ul>
-<li>QNAP TS-251 NAS</li>
-<li>APC Back-UPS 550</li>
-</ul></li>
-</ul></li>
-<li><strong>Carbon Copy Cloner</strong>
-<ul>
-<li>Schedule
-<ul>
-<li>Daily at 3:30am</li>
-</ul></li>
-<li>Hardware
-<ul>
-<li>1TB Western Digital SSD over USB</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-<h3 id="notes">Notes</h3>
-<p>I do all of my work in the Dropbox folder. This means the files are backed up as soon as I save them. It also gives me a limited form of version control (though if I need more I’ll use a local Git repository).</p>
-<p>Time Machine is enabled on each Mac. Since this part of the backup has a higher delay than Dropbox, I don’t rely it on for files I’m actively working on.</p>
-<p>CrashPlan runs on each machine (including the NAS). Since the local disks contain Time Machine archives, all the machines <em>and</em> their history are replicated to CrashPlan. The full Time Machine archive is safe as long as at least one copy, local or remote, is preserved. The NAS is setup in a RAID-1 array with large disks to tolerate individual hardware failures and perserve as much history as possible.</p>
-<p>The only realistic scenario where I can lose data is if my local backups and CrashPlan fail at the same time. That said, I’m lacking a routine for testing the backups. For example, if something goes wrong with Time Machine, the bad version will still get backed up to CrashPlan.</p>
-<script>
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '/js/events-client.min.js';
-  s.onload = function() {
-    var c = radBlogEventsClient;
-    c.sendEvent(c.createEvent(), function(err) {
-      if (err) console.log(err);
-    });
-  }
-  document.body.appendChild(s);
-})();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Backups</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo">rad</h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Backups</h2>
+          </div>
+          <div class="Post-content">
+            <p><em>plural noun</em></p>
+            <blockquote>
+            <p>things that can be called on if necessary; reserves.</p>
+            </blockquote>
+            <h2 id="my-home-backup-system">My Home Backup System</h2>
+            <p>When I put effort into something <a href="bliki">I want to keep it around</a>. That’s why I’m paranoid about my backups.</p>
+            <h3 id="structure">Structure</h3>
+            <ul>
+            <li>Offsite
+            <ul>
+            <li><strong>Dropbox</strong>
+            <ul>
+            <li>Schedule
+            <ul>
+            <li>Continuous</li>
+            </ul></li>
+            </ul></li>
+            <li><strong>CrashPlan</strong>
+            <ul>
+            <li>Schedule
+            <ul>
+            <li>Continuous</li>
+            </ul></li>
+            </ul></li>
+            </ul></li>
+            <li>Onsite
+            <ul>
+            <li><strong>Time Machine</strong>
+            <ul>
+            <li>Schedule
+            <ul>
+            <li>Continuous</li>
+            </ul></li>
+            <li>Hardware
+            <ul>
+            <li>QNAP TS-251 NAS</li>
+            <li>APC Back-UPS 550</li>
+            </ul></li>
+            </ul></li>
+            <li><strong>Carbon Copy Cloner</strong>
+            <ul>
+            <li>Schedule
+            <ul>
+            <li>Daily at 3:30am</li>
+            </ul></li>
+            <li>Hardware
+            <ul>
+            <li>1TB Western Digital SSD over USB</li>
+            </ul></li>
+            </ul></li>
+            </ul></li>
+            </ul>
+            <h3 id="notes">Notes</h3>
+            <p>I do all of my work in the Dropbox folder. This means the files are backed up as soon as I save them. It also gives me a limited form of version control (though if I need more I’ll use a local Git repository).</p>
+            <p>Time Machine is enabled on each Mac. Since this part of the backup has a higher delay than Dropbox, I don’t rely it on for files I’m actively working on.</p>
+            <p>CrashPlan runs on each machine (including the NAS). Since the local disks contain Time Machine archives, all the machines <em>and</em> their history are replicated to CrashPlan. The full Time Machine archive is safe as long as at least one copy, local or remote, is preserved. The NAS is setup in a RAID-1 array with large disks to tolerate individual hardware failures and perserve as much history as possible.</p>
+            <p>The only realistic scenario where I can lose data is if my local backups and CrashPlan fail at the same time. That said, I’m lacking a routine for testing the backups. For example, if something goes wrong with Time Machine, the bad version will still get backed up to CrashPlan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
 </html>

@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: #428ade url('images/bottom-bg.png') repeat-x center bottom;
+  background-size: 100% 50%;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: 'avenir next', 'avenir', sans-serif;
+}
+
+#MainContainer {
+  width: 960px;
+  margin: 100px auto;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: baskerville;
+}
+
+.Header {
+  width: 100%;
+}
+
+.Header-logo {
+  color: #fff;
+  font-size: 72px;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 72px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.Page {
+  background-color: white;
+  width: 100%;
+  padding: 36px 0 94px 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.Post-content {
+  overflow: auto;
+  padding: 0 124px;
+}
+
+.Post-title {
+  font-size: 72px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.Post-meta {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 72px;
+  font-variant: small-caps;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  height: 27px;
+  font-size: 18px;
+  display: inline-block;
+  border-color: #fff #fff #ccc #fff;
+  color: #055abe;
+}
+
+a:hover {
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+
+figure {
+  width: 300px;
+}
+
+.left {
+  float: left;
+  margin-left:-48px;
+  margin-right: 48px;
+}
+
+.right {
+  float: right;
+  margin-left: 48px;
+  margin-right:-48px;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  padding-top: 4px;
+  font-size: 13px;
+  color: #666;
+}

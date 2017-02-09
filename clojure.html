@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>rad.blog: Clojure</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="styling.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header>
-<h1 class="title">Clojure</h1>
-</header>
-<p>(comment TODO)</p>
-<script>
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '/js/events-client.min.js';
-  s.onload = function() {
-    var c = radBlogEventsClient;
-    c.sendEvent(c.createEvent(), function(err) {
-      if (err) console.log(err);
-    });
-  }
-  document.body.appendChild(s);
-})();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Clojure</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo">rad</h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Clojure</h2>
+          </div>
+          <div class="Post-content">
+            <p>(comment TODO)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
 </html>

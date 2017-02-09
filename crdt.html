@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>rad.blog: CRDT</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="styling.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header>
-<h1 class="title">CRDT</h1>
-</header>
-<p>An acronym for <strong>Conflict-free Replicated Data Type</strong>.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>See <a href="https://www.youtube.com/watch?v=ebWVLVhiaiY">this talk on YouTube</a> by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.</p>
-<p><a href="https://www.youtube.com/watch?v=ebWVLVhiaiY"><img src="shapiro.jpg" width="469"></a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="http://hal.upmc.fr/inria-00555588/document"><em>A comprehensive study of Convergent and Commutative Replicated Data Types</em></a> (2011)</li>
-<li><a href="https://arxiv.org/pdf/1508.05545.pdf"><em>Decoupling conflicts for configurable resolution in an open replication system</em></a> (2016)</li>
-</ul>
-<h2 id="related-terms">Related Terms</h2>
-<p><a href="replication">Replication</a></p>
-<h2 id="implementations">Implementations</h2>
-<p>See <a href="https://github.com/rads/todop2p">TodoP2P</a> for example projects using some of these libraries.</p>
-<ul>
-<li>Clojure
-<ul>
-<li><a href="http://replikativ.io/">replikativ</a> (<a href="replikativ">Bliki</a>)
-<ul>
-<li>replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)</li>
-<li>Uses WebSockets as wire</li>
-</ul></li>
-</ul></li>
-<li>Erlang
-<ul>
-<li><a href="https://couchdb.readthedocs.io/en/latest/replication/protocol.html">CouchDB</a>
-<ul>
-<li>CouchDB uses a Merkle DAG like hyperlog and Git</li>
-</ul></li>
-</ul></li>
-<li>JavaScript
-<ul>
-<li><a href="https://github.com/mafintosh/hyperlog">hyperlog</a> (<a href="hyperlog">Bliki</a>)
-<ul>
-<li>hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.</li>
-<li>Uses Node.js streams as wire</li>
-</ul></li>
-<li><a href="https://github.com/ssbc/scuttlebot">Scuttlebot</a> (<a href="scuttlebot">Bliki</a>)
-<ul>
-<li>Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message’s locally-recorded timestamp.</li>
-</ul></li>
-<li><a href="https://pouchdb.com/">PouchDB</a>
-<ul>
-<li>A client for CouchDB in JavaScript.</li>
-<li><a href="distributed-systems">Decentralized, not distributed</a>: PouchDB relies on an external CouchDB server to talk to other peers.</li>
-<li>Uses HTTP as wire</li>
-</ul></li>
-</ul></li>
-</ul>
-<script>
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '/js/events-client.min.js';
-  s.onload = function() {
-    var c = radBlogEventsClient;
-    c.sendEvent(c.createEvent(), function(err) {
-      if (err) console.log(err);
-    });
-  }
-  document.body.appendChild(s);
-})();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: CRDT</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo">rad</h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">CRDT</h2>
+          </div>
+          <div class="Post-content">
+            <p>An acronym for <strong>Conflict-free Replicated Data Type</strong>.</p>
+            <h2 id="getting-started">Getting Started</h2>
+            <p>See <a href="https://www.youtube.com/watch?v=ebWVLVhiaiY">this talk on YouTube</a> by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.</p>
+            <p><a href="https://www.youtube.com/watch?v=ebWVLVhiaiY"><img src="shapiro.jpg" width="469"></a></p>
+            <h2 id="references">References</h2>
+            <ul>
+            <li><a href="http://hal.upmc.fr/inria-00555588/document"><em>A comprehensive study of Convergent and Commutative Replicated Data Types</em></a> (2011)</li>
+            <li><a href="https://arxiv.org/pdf/1508.05545.pdf"><em>Decoupling conflicts for configurable resolution in an open replication system</em></a> (2016)</li>
+            </ul>
+            <h2 id="related-terms">Related Terms</h2>
+            <p><a href="replication">Replication</a></p>
+            <h2 id="implementations">Implementations</h2>
+            <p>See <a href="https://github.com/rads/todop2p">TodoP2P</a> for example projects using some of these libraries.</p>
+            <ul>
+            <li>Clojure
+            <ul>
+            <li><a href="http://replikativ.io/">replikativ</a> (<a href="replikativ">Bliki</a>)
+            <ul>
+            <li>replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)</li>
+            <li>Uses WebSockets as wire</li>
+            </ul></li>
+            </ul></li>
+            <li>Erlang
+            <ul>
+            <li><a href="https://couchdb.readthedocs.io/en/latest/replication/protocol.html">CouchDB</a>
+            <ul>
+            <li>CouchDB uses a Merkle DAG like hyperlog and Git</li>
+            </ul></li>
+            </ul></li>
+            <li>JavaScript
+            <ul>
+            <li><a href="https://github.com/mafintosh/hyperlog">hyperlog</a> (<a href="hyperlog">Bliki</a>)
+            <ul>
+            <li>hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.</li>
+            <li>Uses Node.js streams as wire</li>
+            </ul></li>
+            <li><a href="https://github.com/ssbc/scuttlebot">Scuttlebot</a> (<a href="scuttlebot">Bliki</a>)
+            <ul>
+            <li>Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message’s locally-recorded timestamp.</li>
+            </ul></li>
+            <li><a href="https://pouchdb.com/">PouchDB</a>
+            <ul>
+            <li>A client for CouchDB in JavaScript.</li>
+            <li><a href="distributed-systems">Decentralized, not distributed</a>: PouchDB relies on an external CouchDB server to talk to other peers.</li>
+            <li>Uses HTTP as wire</li>
+            </ul></li>
+            </ul></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
 </html>

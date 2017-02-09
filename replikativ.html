@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>rad.blog: replikativ</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="styling.css">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header>
-<h1 class="title">replikativ</h1>
-</header>
-<p>A Clojure library for P2P replication with CRDTs. Source code <a href="https://github.com/replikativ/replikativ">available on GitHub</a>.</p>
-<h2 id="getting-started">Getting Started</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KV8JcVhQHxw" frameborder="0" allowfullscreen>
-</iframe>
-<h2 id="features">Features</h2>
-<ul>
-<li>Provides a CDVCS data type which represents an append-only graph (similar to <a href="hyperlog" class="uri">hyperlog</a>)</li>
-<li>Expects the developer to be aware of possible conflicts</li>
-<li>Presents an API to allow those conflicts to be resolved explicitly</li>
-</ul>
-<h2 id="example">Example</h2>
-<p>See <a href="https://github.com/replikativ/replikativ-cljs-demo">replikativ/replikativ-cljs-demo on GitHub</a>.</p>
-<script>
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '/js/events-client.min.js';
-  s.onload = function() {
-    var c = radBlogEventsClient;
-    c.sendEvent(c.createEvent(), function(err) {
-      if (err) console.log(err);
-    });
-  }
-  document.body.appendChild(s);
-})();
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: replikativ</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo">rad</h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">replikativ</h2>
+          </div>
+          <div class="Post-content">
+            <p>A Clojure library for P2P replication with CRDTs. Source code <a href="https://github.com/replikativ/replikativ">available on GitHub</a>.</p>
+            <h2 id="getting-started">Getting Started</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KV8JcVhQHxw" frameborder="0" allowfullscreen>
+            </iframe>
+            <h2 id="features">Features</h2>
+            <ul>
+            <li>Provides a CDVCS data type which represents an append-only graph (similar to <a href="hyperlog" class="uri">hyperlog</a>)</li>
+            <li>Expects the developer to be aware of possible conflicts</li>
+            <li>Presents an API to allow those conflicts to be resolved explicitly</li>
+            </ul>
+            <h2 id="example">Example</h2>
+            <p>See <a href="https://github.com/replikativ/replikativ-cljs-demo">replikativ/replikativ-cljs-demo on GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
 </html>

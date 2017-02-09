@@ -1,7 +1,3 @@
----
-title: Rad
----
-
 <img src="pic.jpg" width="200" height="200">
 
 ## Writings
