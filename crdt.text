@@ -8,6 +8,8 @@ An acronym for **Conflict-free Replicated Data Type**.
 
 See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.
 
+[<img src="shapiro.jpg" width="469">][talk]
+
 [talk]: https://www.youtube.com/watch?v=ebWVLVhiaiY
 
 ## References
