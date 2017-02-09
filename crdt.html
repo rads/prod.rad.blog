@@ -36,6 +36,10 @@
 <li>replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)</li>
 </ul></li>
 </ul></li>
+<li>Erlang
+<ul>
+<li><a href="https://couchdb.readthedocs.io/en/latest/replication/protocol.html">CouchDB</a></li>
+</ul></li>
 <li>JavaScript
 <ul>
 <li><a href="https://github.com/mafintosh/hyperlog">hyperlog</a> (<a href="hyperlog">Bliki</a>)
@@ -45,6 +49,11 @@
 <li><a href="https://github.com/ssbc/scuttlebot">Scuttlebot</a> (<a href="scuttlebot">Bliki</a>)
 <ul>
 <li>Scuttlebot is a CRDT because a) writes to concurrent streams do not conflict with each other and b) conflicts within streams are handled using (as far as I know) last-write-wins semantics using the message’s locally-recorded timestamp.</li>
+</ul></li>
+<li><a href="https://pouchdb.com/">PouchDB</a>
+<ul>
+<li>A client for CouchDB in JavaScript.</li>
+<li><a href="distributed-systems">Decentralized, not distributed</a>: PouchDB relies on an external CouchDB server to talk to other peers.</li>
 </ul></li>
 </ul></li>
 </ul>

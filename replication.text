@@ -63,6 +63,3 @@ There are separate pages for [CRDT](crdt#implementations) and [Scuttlebutt](scut
 - Java
     - [HornetQ](https://docs.jboss.org/hornetq/2.4.0.Final/docs/user-manual/html/ha.html)
     - [Kafka](https://kafka.apache.org/documentation/#replication)
-- JavaScript
-    - [CouchDB](https://couchdb.readthedocs.io/en/latest/replication/protocol.html)
-    - [PouchDB](https://pouchdb.com/)
