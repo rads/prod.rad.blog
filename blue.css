@@ -45,13 +45,20 @@ h6 {
 }
 
 .Header-logo {
-  color: #fff;
-  font-size: 72px;
-  font-weight: 600;
   margin-bottom: 0;
+}
+
+.Header-logo a {
+  display: inline-block;
+  border: 0;
+  text-shadow: none;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
   line-height: 72px;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  font-size: 72px;
+  font-weight: 600;
 }
 
 .Page {
@@ -71,7 +78,7 @@ h6 {
   text-align: center;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .Post-meta {
