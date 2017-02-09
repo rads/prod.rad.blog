@@ -26,6 +26,7 @@ This talk by Marc Shapiro is an excellent introduction to what CRDTs are and how
         - replikativ is a library that offers many CRDTs including LWWR, G-Set, OR-Map, and CDVCS (an append-only graph)
 - Erlang
     - [CouchDB](https://couchdb.readthedocs.io/en/latest/replication/protocol.html)
+        - CouchDB uses a Merkle DAG like hyperlog and Git
 - JavaScript
     - [hyperlog](https://github.com/mafintosh/hyperlog) ([Bliki](hyperlog))
         - hyperlog is a CRDT because two append-only Merkle DAGs can inherently be merged in either order. In other words, the internal replication updates among hyperlogs are commutative.
