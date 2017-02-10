@@ -16,11 +16,7 @@ title: Replication
 
 ## Example
 
-This is replication.
-
-This is replication.
-
-This is replication.
+This is replication. This is replication. This is replication.
 
 ## Introduction
 
