@@ -6,24 +6,38 @@
 
 html,
 body {
-  height: 100%;
   padding: 0;
   margin: 0;
 }
 
 html {
-  background: #428ade url('images/bottom-bg.png') repeat-x center bottom;
-  background-size: 100% 50%;
-  background-attachment: fixed;
+	background-color: #428ade;
 }
 
 body {
+  padding: 100px 0;
   font-family: 'avenir next', 'avenir', sans-serif;
+  background: #428ade url('images/bottom-bg.png') repeat-x center bottom;
+  background-size: 100% 50%;
+  background-attachment: fixed;
+  position: relative; // added for pseudo-element
+}
+
+body::before {
+  content: ' ';
+  position: fixed; // instead of background-attachment
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('images/bottom-bg.png') repeat-x center bottom;
+  will-change: transform; // creates a new paint layer
+  z-index: -1;
 }
 
 #MainContainer {
   width: 960px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
 p {
