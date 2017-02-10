@@ -21,7 +21,7 @@ html.loaded {
 body {
   position: relative;
   font-family: 'avenir next', 'avenir', sans-serif;
-  padding: 100px 0;
+  padding: 48px 0 100px 0;
 }
 
 body::before {
