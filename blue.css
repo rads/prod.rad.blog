@@ -11,29 +11,31 @@ body {
 }
 
 html {
-	background-color: #428ade;
+  background-color: #428ade;
+}
+
+html.loaded {
+  background-color: #000;
 }
 
 body {
-  padding: 100px 0;
+  position: relative;
   font-family: 'avenir next', 'avenir', sans-serif;
-  background: #428ade url('images/bottom-bg.png') repeat-x center bottom;
-  background-size: 100% 50%;
-  background-attachment: fixed;
-  position: relative; // added for pseudo-element
+  padding: 100px 0;
 }
 
 body::before {
-  content: ' ';
-  position: fixed; // instead of background-attachment
-  width: 100%;
-  height: 100%;
+  content: '';
+  background: #428ade url('images/bottom-bg.png') repeat-x center bottom;
+  position: fixed;
   top: 0;
   left: 0;
-  background: url('images/bottom-bg.png') repeat-x center bottom;
-  will-change: transform; // creates a new paint layer
+  bottom: 0;
+  right: 0;
+  overflow: auto;
   z-index: -1;
 }
+
 
 #MainContainer {
   width: 960px;
