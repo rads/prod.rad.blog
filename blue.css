@@ -21,6 +21,7 @@ html.loaded {
 body {
   position: relative;
   font-family: 'avenir next', 'avenir', sans-serif;
+  font-size: 18px;
   padding: 48px 0 100px 0;
 }
 
@@ -44,7 +45,6 @@ body::before {
 
 p {
   line-height: 1.5;
-  font-size: 18px;
 }
 
 h1,
