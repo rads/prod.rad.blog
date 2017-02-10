@@ -1,4 +1,4 @@
-<img src="pic.jpg" width="200" height="200">
+<img src="pic.jpg" style="float: right" width="200" height="200">
 
 ## Writings
 
