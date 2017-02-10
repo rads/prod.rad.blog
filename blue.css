@@ -21,7 +21,7 @@ html.loaded {
 body {
   position: relative;
   font-family: 'avenir next', 'avenir', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 48px 0 100px 0;
 }
 
@@ -99,7 +99,7 @@ h6 {
   text-align: center;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin: 48px 0;
 }
 
 .Post-meta {
