@@ -144,3 +144,7 @@ figure figcaption {
   font-size: 13px;
   color: #666;
 }
+
+strong {
+  font-weight: 600;
+}
