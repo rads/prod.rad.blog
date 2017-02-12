@@ -10,7 +10,7 @@ An acronym for **Conflict-free Replicated Data Type**.
   <a href="https://www.youtube.com/watch?v=ebWVLVhiaiY">
     <img src="shapiro.jpg" width="469">
   </a>
-  <caption>Marc Shapiro</caption>
+  <figcaption>Marc Shapiro</figcaption>
 </figure>
 
 See [this talk on YouTube][talk] by Marc Shapiro for an excellent introduction on what CRDTs are and how they work.
