@@ -1,4 +1,9 @@
-<img src="pic.jpg" style="float: right" width="200" height="200">
+<img
+  alt="A picture of Radford Smith."
+  src="pic.jpg"
+  style="float: right"
+  width="200"
+  height="200">
 
 ## Writings
 
