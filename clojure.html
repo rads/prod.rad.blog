@@ -5,7 +5,7 @@
     <title>rad.blog: Clojure</title>
     <link rel="stylesheet" href="blue.css">
   </head>
-  <body onload="document.documentElement.className='loaded'">
+  <body>
     <div id="MainContainer">
       <div class="Header">
         <h1 class="Header-logo"><a href="/">rad</a></h1>
@@ -21,6 +21,17 @@
         </div>
       </div>
     </div>
+    <script>
+    (function() {
+      if (window.chrome) {
+        document.documentElement.classList.add('chrome');
+      }
+
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.documentElement.classList.add('mobile');
+      }
+    })();
+    </script>
     <script>
     (function() {
       var s = document.createElement('script');
