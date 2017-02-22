@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Women in Computing</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo"><a href="/">rad</a></h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Women in Computing</h2>
+          </div>
+          <div class="Post-content">
+            <ul>
+            <li>Ada Lovelace</li>
+            <li>Adele Goldberg</li>
+            <li>Barbara Liskov</li>
+            <li>Grace Hopper</li>
+            <li>Laurie Spiegel</li>
+            <li>Margaret Hamilton</li>
+            <li>Nancy Lynch</li>
+            <li>Susan Kare</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      if (window.chrome) {
+        document.documentElement.classList.add('chrome');
+      }
+
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.documentElement.classList.add('mobile');
+      }
+    })();
+    </script>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
+</html>
