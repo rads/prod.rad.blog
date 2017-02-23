@@ -2,7 +2,7 @@
 title: Women in Computing
 ---
 
-[<img src="the-expanding-universe.png" width="705" height="705">][the-expanding-universe]
+[<img alt="Album artwork for The Expanding Universe by Laurie Spiegel" src="the-expanding-universe.png" width="705" height="705">][the-expanding-universe]
 
 [the-expanding-universe]: https://www.youtube.com/watch?v=rN3uYELX8iQ&list=PLSekTzicB1yfnfJJksZo_mBlGqKGfDIJn
 
