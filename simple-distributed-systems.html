@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Simple Distributed Systems</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo"><a href="/">rad</a></h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Simple Distributed Systems</h2>
+          </div>
+          <div class="Post-content">
+            <h2 id="description">Description</h2>
+            <p>You might already know that every website is a distributed system. However, you might also not know what this means for your day-to-day work. In my talk you’ll learn about the essential elements of distributed systems and see practical examples of how this impacts modern web and mobile applications.</p>
+            <p><em>Radford is a software engineer at Funding Circle who previously worked at Automattic, Scribd, and Amazon. He has been a passionate advocate for Clojure ever since he first encountered it in 2009. He is currently self-studying distributed systems and data visualization.</em></p>
+            <h2 id="outline">Outline</h2>
+            <p>TODO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      if (window.chrome) {
+        document.documentElement.classList.add('chrome');
+      }
+
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.documentElement.classList.add('mobile');
+      }
+    })();
+    </script>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
+</html>
