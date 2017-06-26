@@ -16,22 +16,22 @@
             <h2 class="Post-title">The Life of an Event</h2>
           </div>
           <div class="Post-content">
-            <h2 id="user-event-dom-event-handler-re-frame-dispatch">User Event → DOM Event Handler → Re-frame Dispatch</h2>
-            <p>TODO</p>
-            <h2 id="re-frame-event-handler-http-request-rpc-message">Re-frame Event Handler → HTTP Request → RPC Message</h2>
-            <p>TODO</p>
-            <h2 id="http-server-kafka-message">HTTP Server → Kafka Message</h2>
-            <p>TODO</p>
-            <h2 id="rpc-message-http-response-re-frame-db">RPC Message → HTTP Response → Re-frame DB</h2>
-            <p>TODO</p>
-            <h2 id="re-frame-event-handler-http-request-rpc-message-1">Re-frame Event Handler → HTTP Request → RPC Message</h2>
-            <p>TODO</p>
-            <h2 id="http-server-postgresql-table-row">HTTP Server → PostgreSQL Table Row</h2>
-            <p>TODO</p>
-            <h2 id="rpc-message-http-response-re-frame-db-1">RPC Message → HTTP Response → Re-frame DB</h2>
-            <p>TODO</p>
-            <h2 id="dom-elements-dom-event-handler-user-event">DOM Elements → DOM Event Handler → User Event</h2>
-            <p>TODO</p>
+            <h2 id="user-event-dom-event-handler-re-frame-dispatch">1. User Event → DOM Event Handler → Re-frame Dispatch</h2>
+            <p>When the user clicks something or types in a form field, the browser dispatches a DOM event. We write callbacks for these DOM events as <code>on-*</code> attributes in our Reagent components. Inside these callbacks we call <code>(rf/dispatch)</code> which creates an event in Re-frame.</p>
+            <h2 id="a.-re-frame-event-handler-http-request-rpc-message">2a. Re-frame Event Handler → HTTP Request → RPC Message</h2>
+            <p>The Re-frame event is handled by a function we registered using <code>(rf/reg-event-fx)</code>. Our handler is a pure function that returns a map with an <code>:http-xhrio</code> key. The value for this key represents an HTTP request to be sent to the server. The request body is JSON-encoded Transit which represents an RPC message the server will receive.</p>
+            <h2 id="b.-http-server-kafka-message">2b. HTTP Server → Kafka Message</h2>
+            <p>The RPC message is received by the server and routed to a Ring handler. Inside the Ring handler we publish a message to Kafka.</p>
+            <h2 id="c.-rpc-message-http-response-re-frame-event-handler-re-frame-db">2c. RPC Message → HTTP Response → Re-frame Event Handler → Re-frame DB</h2>
+            <p>After publishing to Kafka we send back the confirmation to the browser. The Re-frame event handler will be a function registered with <code>(rf/reg-event-db)</code>. The handler is a pure function that takes the DB and handles the response.</p>
+            <h2 id="a.-re-frame-event-handler-http-request-rpc-message-1">3a. Re-frame Event Handler → HTTP Request → RPC Message</h2>
+            <p>Once we’ve confirmed that the event was published to Kafka, we want to retrieve the new state that was caused by it. At some point (?) we will trigger an event for a handler registered with <code>(rf/reg-event-fx)</code>. This handler will return an <code>:http-xhrio</code> key like last time.</p>
+            <h2 id="b.-http-server-postgresql-table-row">3b. HTTP Server → PostgreSQL Table Row</h2>
+            <p>The HTTP server receives the message and sends a query to the PostgreSQL database. It returns the rows in the response (which <em>may or may not</em> have been updated with effects of the new event).</p>
+            <h2 id="c.-rpc-message-http-response-re-frame-event-handler-re-frame-db-1">3c. RPC Message → HTTP Response → Re-frame Event Handler → Re-frame DB</h2>
+            <p>The rows are returned in the RPC message and handled by the Re-frame function defined with <code>(rf/reg-event-db)</code>. The handler uses the response to update the app state atom with the latest view of the PostgreSQL data.</p>
+            <h2 id="dom-elements-dom-event-handler-user-event">4. DOM Elements → DOM Event Handler → User Event</h2>
+            <p>After every Re-frame event handler finishes, any updated subscriptions will trigger re-renders in the Reagent components. This may update the DOM event handlers which will respond to future user events. Go back to step 1 to complete the loop.</p>
           </div>
         </div>
       </div>
