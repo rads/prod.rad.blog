@@ -11,11 +11,13 @@ body {
 }
 
 html,
-html.chrome.mobile {
+html.chrome.mobile,
+html.safari.mobile {
   background-color: #428ade;
 }
 
-html.chrome {
+html.chrome,
+html.safari {
   background-color: #000;
 }
 

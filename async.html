@@ -25,6 +25,8 @@
     (function() {
       if (window.chrome) {
         document.documentElement.classList.add('chrome');
+      } else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
+        document.documentElement.classList.add('safari');
       }
 
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
