@@ -13,3 +13,9 @@ GitHub: [https://github.com/mafintosh/hyperlog](https://github.com/mafintosh/hyp
 > - If you send back a node that has a reference to another feed in index A, send back the scuttlebutt handshake for that particular log.
 > 
 > So when a user does hyperlog.add(links, node) hyperlog will lookup the nodes referenced by the links array and see which logs they belong too. If any of those logs are different than our own local log that information is stored in an internal index.
+
+## Related Links
+
+- [*The Potential Dangers of Causal Consistency and an Explicit Solution*][causal] (2012)
+
+[causal]: http://www.bailis.org/papers/explicit-socc2012.pdf
