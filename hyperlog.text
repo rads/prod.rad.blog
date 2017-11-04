@@ -2,7 +2,9 @@
 title: hyperlog
 ---
 
-GitHub: [https://github.com/mafintosh/hyperlog](https://github.com/mafintosh/hyperlog)
+<div class="SubHeader">
+  [https://github.com/mafintosh/hyperlog](https://github.com/mafintosh/hyperlog)
+</div>
 
 ## Replication Protocol
 
@@ -13,6 +15,10 @@ GitHub: [https://github.com/mafintosh/hyperlog](https://github.com/mafintosh/hyp
 > - If you send back a node that has a reference to another feed in index A, send back the scuttlebutt handshake for that particular log.
 > 
 > So when a user does hyperlog.add(links, node) hyperlog will lookup the nodes referenced by the links array and see which logs they belong too. If any of those logs are different than our own local log that information is stored in an internal index.
+>
+> <p class="Source">— <span class="Person">Mathias Buus</span>, replying to a [GitHub issue][gh-issue]</p>
+
+[gh-issue]: https://github.com/mafintosh/hyperlog/issues/13#issuecomment-168435080
 
 ## Related Links
 

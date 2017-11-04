@@ -16,7 +16,9 @@
             <h2 class="Post-title">hyperlog</h2>
           </div>
           <div class="Post-content">
-            <p>GitHub: <a href="https://github.com/mafintosh/hyperlog" class="uri">https://github.com/mafintosh/hyperlog</a></p>
+            <div class="SubHeader">
+            <p><a href="https://github.com/mafintosh/hyperlog" class="uri">https://github.com/mafintosh/hyperlog</a></p>
+            </div>
             <h2 id="replication-protocol">Replication Protocol</h2>
             <blockquote>
             <ul>
@@ -27,6 +29,9 @@
             <li>If you send back a node that has a reference to another feed in index A, send back the scuttlebutt handshake for that particular log.</li>
             </ul>
             <p>So when a user does hyperlog.add(links, node) hyperlog will lookup the nodes referenced by the links array and see which logs they belong too. If any of those logs are different than our own local log that information is stored in an internal index.</p>
+            <p class="Source">
+            — <span class="Person">Mathias Buus</span>, replying to a <a href="https://github.com/mafintosh/hyperlog/issues/13#issuecomment-168435080">GitHub issue</a>
+            </p>
             </blockquote>
             <h2 id="related-links">Related Links</h2>
             <ul>
