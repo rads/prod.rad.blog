@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rad.blog: Help Them Help You</title>
+    <link rel="stylesheet" href="blue.css">
+  </head>
+  <body>
+    <div id="MainContainer">
+      <div class="Header">
+        <h1 class="Header-logo"><a href="/">rad</a></h1>
+      </div>
+      <div class="Page">
+        <div class="Post">
+          <div class="Post-header">
+            <h2 class="Post-title">Help Them Help You</h2>
+          </div>
+          <div class="Post-content">
+            <p>Even though learning the guitar literally hurts at first, everyone knows you have to build your calluses. Instructors help beginners fight through the pain because there's no other way to do it without changing the essence of the guitar or a breakthrough in string technology.</p>
+            <p>On the other hand my own guitar has an integrated tuner. An expert doesn’t need it — they can use their ears — but they <em>could</em> use it and get the same leverage I do without being hindered in other ways.</p>
+            <p>I believe instruments should be optimized for experts. That said, we can layer guides (empathetic teachers, metronomes, tuners) on top of the expert core (unforgiving vibrating strings) to help people build their calluses, keep rhythm, and play in tune.</p>
+	    <p>The Clojure core team wants to keep working on the fundamentals, but this is in opposition to the time they spend teaching. I can relate based on my own experience teaching ClojureScript to backend developers for the past year and a half. It’s exhausting to teach beginners and solve expert problems at the same time. The two modes of thinking are so different that when I switch between them too often, I start to get crabby and impatient.</p>
+            <p>Often the time we spend discussing the intent of core committers toward beginners is less effective than actually making something to help beginners. The experts are too consumed by making things themselves to spend time at the debate table. Go write a great tutorial and I bet you will get plenty of encouragement from the Clojure team. It’s easier to support something than it is to defend nuanced personal views on a complex issue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function() {
+      if (window.chrome) {
+        document.documentElement.classList.add('chrome');
+      } else if (navigator.userAgent.toLowerCase().indexOf('safari') != -1) {
+        document.documentElement.classList.add('safari');
+      }
+
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.documentElement.classList.add('mobile');
+      }
+    })();
+    </script>
+    <script>
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '/js/events-client.min.js';
+      s.onload = function() {
+        var c = radBlogEventsClient;
+        c.sendEvent(c.createEvent(), function(err) {
+          if (err) console.log(err);
+        });
+      }
+      document.body.appendChild(s);
+    })();
+    </script>
+  </body>
+</html>
